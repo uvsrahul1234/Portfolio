@@ -3,129 +3,408 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venkata Sai Rahul Unnam | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>V.S. Rahul Unnam | AI Backend & MLOps</title>
+    
+    <!-- External Libraries for Animations and Icons -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Base & Root Variables */
+        :root {
+            --bg-color: #0b0f19;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.4);
+            --glass-bg: rgba(30, 41, 59, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Particles Background Container */
+        #particles-js {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        /* Glassmorphism Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.2rem 0;
+            background: rgba(11, 15, 25, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+        }
+        .nav-container {
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { font-size: 1.5rem; font-weight: 800; color: #fff; letter-spacing: 1px; }
+        .logo span { color: var(--accent); }
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a { 
+            color: var(--text-main); 
+            text-decoration: none; 
+            font-size: 0.95rem; 
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* General Section Styling */
+        section {
+            padding: 100px 5%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            background: linear-gradient(90deg, #fff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 0;
+        }
+        .hero h1 { font-size: 4.5rem; line-height: 1.1; margin: 0 0 1rem 0; }
+        .hero h2 { font-size: 2rem; color: var(--text-muted); font-weight: 400; margin: 0 0 1.5rem 0; }
+        .hero p { max-width: 600px; font-size: 1.1rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 2.5rem; }
+        
+        .btn {
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: #000;
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+        .btn-primary:hover {
+            box-shadow: 0 0 30px var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* Glassmorphism Cards */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .glass-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        /* Skills Array */
+        .skills-container { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+        .skill-badge {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--glass-border);
+            padding: 0.7rem 1.5rem;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        .skill-badge:hover {
+            background: rgba(56, 189, 248, 0.1);
+            border-color: var(--accent);
+            color: var(--accent);
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        .project-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; }
+        .project-tags span { font-size: 0.8rem; color: var(--accent); background: rgba(56,189,248,0.1); padding: 0.2rem 0.6rem; border-radius: 4px; }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: var(--glass-border);
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            margin-left: -1px;
+        }
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: calc(100% - 80px);
+            margin-bottom: 2rem;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            right: auto;
+            left: 12px;
+            background-color: var(--bg-color);
+            border: 3px solid var(--accent);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-date { font-size: 0.9rem; color: var(--accent); font-weight: bold; margin-bottom: 0.5rem; }
+
+        /* Footer */
+        footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--glass-border); margin-top: 4rem; }
+        .social-links { margin-top: 1.5rem; display: flex; justify-content: center; gap: 1.5rem; }
+        .social-links a { color: var(--text-muted); font-size: 1.5rem; transition: color 0.3s; }
+        .social-links a:hover { color: var(--accent); transform: scale(1.1); }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3rem; }
+            .nav-links { display: none; } /* Add hamburger menu logic here for mobile if desired */
+            .timeline::after { left: 20px; }
+            .timeline-item { width: 100%; padding-left: 50px; }
+        }
+    </style>
 </head>
 <body>
 
+    <!-- Interactive Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
     <nav>
-        <div class="nav-brand">V.S. Rahul Unnam</div>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><button id="theme-toggle" class="theme-toggle">🌙 Dark</button></li>
-        </ul>
+        <div class="nav-container">
+            <div class="logo">V.S.Rahul<span>.</span></div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+            </div>
+        </div>
     </nav>
 
-    <section class="hero" id="about">
-        <h1>Venkata Sai Rahul Unnam</h1>
-        <p><strong>Data Science & MLOps Professional</strong></p>
-        <p>I am a Master of Science in Data Science student at the University of North Texas (4.0 GPA) with a background in Mechanical Engineering. With over four years of experience as a Senior Systems Engineer, I specialize in bridging the gap between data science and software engineering by building scalable MLOps pipelines, AI backend systems, and deploying Scientific Machine Learning (SciML) models.</p>
-    </section>
-
-    <hr>
-
-    <section id="skills">
-        <h2>Technical Skills & Tools</h2>
-        <div class="skills-grid">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">FastAPI</span>
-            <span class="skill-tag">AWS</span>
-            <span class="skill-tag">Docker & Kubernetes</span>
-            <span class="skill-tag">MLOps</span>
-            <span class="skill-tag">Data Engineering</span>
-            <span class="skill-tag">LangGraph</span>
-            <span class="skill-tag">SciML / PINNs</span>
-            <span class="skill-tag">RESTful APIs</span>
-            <span class="skill-tag">Time-Series Forecasting</span>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div data-aos="fade-up" data-aos-duration="1000">
+            <h2>Hi, I'm Venkata Sai Rahul Unnam</h2>
+            <h1>I engineer <span style="color: var(--accent);">AI Backends</span> &amp; <br>MLOps Pipelines.</h1>
+            <p>Based in Denton, TX. Transitioning from 4 years of scalable systems engineering at Infosys to cutting-edge AI software development. I build robust architectures that allow Scientific Machine Learning (SciML) and autonomous agents to thrive in production.</p>
+            <a href="#projects" class="btn btn-primary">View My Work</a>
         </div>
     </section>
 
-    <section id="projects">
-        <h2>Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="card">
-                <h3>ARM (Autonomous Reliable Mechanism)</h3>
-                <p><strong>Overview:</strong> Developed a modular Python backend project functioning as an AI Software Engineering Agent.</p>
-                <p><strong>Tech Stack:</strong> LangGraph, FastAPI, Python.</p>
-                <p><strong>Impact:</strong> Engineered an autonomous system capable of resolving complex software engineering tasks, successfully benchmarking its performance against the SWE-bench Lite dataset.</p>
-                <a href="#" class="btn">View on GitHub</a>
-            </div>
-
-            <div class="card">
-                <h3>SciML Models for Air Quality Data</h3>
-                <p><strong>Overview:</strong> Authored a first-author IEEE research paper benchmarking Scientific Machine Learning models.</p>
-                <p><strong>Tech Stack:</strong> Python, PyTorch, Physics-Informed Neural Networks (PINNs).</p>
-                <p><strong>Impact:</strong> Engineered and deployed a novel PINN to accurately model and forecast environmental air quality datasets, improving predictive reliability over traditional architectures.</p>
-                <a href="#" class="btn">Read Paper / Code</a>
-            </div>
-        </div>
-    </section>
-
+    <!-- Experience Timeline -->
     <section id="experience">
-        <h2>Experience & Education</h2>
-        
-        <div style="margin-bottom: 2rem;">
-            <h3>Graduate Research Assistant</h3>
-            <p><strong>UNT Environmental Data Lab</strong> | <em>Denton, TX (May 2025 - May 2026)</em></p>
-            <ul>
-                <li>Managed and processed large-scale environmental datasets.</li>
-                <li>Conducted leading-edge research utilizing machine learning and time-series forecasting.</li>
-            </ul>
-        </div>
+        <h2 class="section-title" data-aos="fade-up">Career & Education</h2>
+        <div class="timeline">
+            
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="glass-card">
+                    <div class="timeline-date">May 2025 - May 2026</div>
+                    <h3>Graduate Research Assistant</h3>
+                    <h4 style="color: var(--text-muted); margin-top: 0;">UNT Environmental Data Lab | Denton, TX</h4>
+                    <p>Conducted leading-edge research utilizing machine learning and time-series forecasting. Managed large-scale environmental datasets to deploy novel predictive models.</p>
+                </div>
+            </div>
 
-        <div style="margin-bottom: 2rem;">
-            <h3>Senior Systems Engineer</h3>
-            <p><strong>Infosys</strong> | <em>Delhi, India</em></p>
-            <ul>
-                <li>Engineered scalable backend systems and optimized operational workflows over a four-year tenure.</li>
-                <li>Collaborated across teams to deliver robust software solutions and maintain high system reliability.</li>
-            </ul>
-        </div>
+            <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                <div class="glass-card">
+                    <div class="timeline-date">Current</div>
+                    <h3>Master of Science in Data Science</h3>
+                    <h4 style="color: var(--text-muted); margin-top: 0;">University of North Texas | GPA: 4.0</h4>
+                    <p>Focusing on advanced machine learning, automated pipelines, and bridging the gap between data analytics and backend software engineering.</p>
+                </div>
+            </div>
 
-        <div>
-            <h3>Education</h3>
-            <p><strong>University of North Texas</strong> - M.S. in Data Science (GPA: 4.0)</p>
-            <p><strong>Vellore Institute of Technology</strong> - B.Tech in Mechanical Engineering</p>
+            <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+                <div class="glass-card">
+                    <div class="timeline-date">4 Years Tenure</div>
+                    <h3>Senior Systems Engineer</h3>
+                    <h4 style="color: var(--text-muted); margin-top: 0;">Infosys | Delhi, India</h4>
+                    <p>Engineered highly scalable backend systems, optimized complex operational workflows, and collaborated across multi-disciplinary teams to ensure high system reliability and performance.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                <div class="glass-card">
+                    <div class="timeline-date">Graduated</div>
+                    <h3>B.Tech in Mechanical Engineering</h3>
+                    <h4 style="color: var(--text-muted); margin-top: 0;">Vellore Institute of Technology</h4>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <footer id="contact">
-        <h2>Get In Touch</h2>
-        <p>I am actively seeking opportunities in MLOps, AI Backend Development, and Data Engineering.</p>
-        <div style="margin-top: 1rem;">
-            <a href="mailto:your.email@example.com">Email Me</a> | 
-            <a href="https://linkedin.com/in/YOUR_PROFILE" target="_blank">LinkedIn</a> | 
-            <a href="https://github.com/YOUR_USERNAME" target="_blank">GitHub</a> |
-            <a href="LINK_TO_YOUR_RESUME_PDF" target="_blank">Download Resume</a>
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title" data-aos="fade-up">Featured Engineering</h2>
+        <div class="projects-grid">
+            
+            <!-- ARM Project -->
+            <div class="glass-card" data-aos="zoom-in">
+                <i class="fa-solid fa-robot" style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                <h3>Autonomous Reliable Mechanism (ARM)</h3>
+                <p>An intelligent AI Software Engineering Agent capable of autonomously resolving complex tasks. Benchmarked for high performance against the SWE-bench Lite dataset.</p>
+                <div class="project-tags">
+                    <span>LangGraph</span>
+                    <span>FastAPI</span>
+                    <span>Python</span>
+                    <span>Agentic AI</span>
+                </div>
+                <a href="#" style="color: #fff; text-decoration: underline; font-size: 0.9rem; margin-top: 1rem; display: inline-block;">View Repository <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <!-- SciML Project -->
+            <div class="glass-card" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fa-solid fa-network-wired" style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                <h3>SciML: Air Quality Benchmarking</h3>
+                <p>Authored a first-author IEEE paper. Engineered a novel Physics-Informed Neural Network (PINN) to accurately model and forecast environmental air quality data, surpassing traditional models.</p>
+                <div class="project-tags">
+                    <span>PyTorch</span>
+                    <span>PINNs</span>
+                    <span>Time-Series</span>
+                    <span>Research</span>
+                </div>
+                <a href="#" style="color: #fff; text-decoration: underline; font-size: 0.9rem; margin-top: 1rem; display: inline-block;">Read Paper <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
         </div>
-        <p style="margin-top: 2rem; font-size: 0.8rem; opacity: 0.7;">&copy; 2026 Venkata Sai Rahul Unnam</p>
+    </section>
+
+    <!-- Technical Skills -->
+    <section id="skills">
+        <h2 class="section-title" data-aos="fade-up">Technical Arsenal</h2>
+        <div class="skills-container" data-aos="fade-up">
+            <div class="skill-badge"><i class="fa-brands fa-python"></i> Python</div>
+            <div class="skill-badge"><i class="fa-solid fa-server"></i> FastAPI</div>
+            <div class="skill-badge"><i class="fa-brands fa-aws"></i> AWS</div>
+            <div class="skill-badge"><i class="fa-brands fa-docker"></i> Docker & K8s</div>
+            <div class="skill-badge"><i class="fa-solid fa-infinity"></i> MLOps</div>
+            <div class="skill-badge"><i class="fa-solid fa-database"></i> Data Engineering</div>
+            <div class="skill-badge"><i class="fa-solid fa-diagram-project"></i> LangGraph</div>
+            <div class="skill-badge"><i class="fa-solid fa-chart-line"></i> Time-Series</div>
+            <div class="skill-badge"><i class="fa-solid fa-brain"></i> SciML / PINNs</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h2 style="margin-bottom: 0.5rem;">Let's Build Something Great.</h2>
+        <p style="color: var(--text-muted);">Actively seeking roles in AI Backend Development and MLOps.</p>
+        
+        <div class="social-links">
+            <a href="https://github.com/YOUR_GITHUB" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:your.email@example.com"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        
+        <p style="margin-top: 2rem; font-size: 0.8rem; color: var(--glass-border);">&copy; 2026 Venkata Sai Rahul Unnam. All Rights Reserved.</p>
     </footer>
 
+    <!-- Scripts -->
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Particles.js Library -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
     <script>
-        const toggleButton = document.getElementById('theme-toggle');
-        const currentTheme = localStorage.getItem('theme');
+        // Initialize Scroll Animations
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800,
+        });
 
-        // Check local storage for saved theme preference
-        if (currentTheme === 'dark') {
-            document.body.setAttribute('data-theme', 'dark');
-            toggleButton.textContent = '☀️ Light';
-        }
-
-        // Toggle functionality
-        toggleButton.addEventListener('click', () => {
-            let theme = document.body.getAttribute('data-theme');
-            if (theme === 'dark') {
-                document.body.removeAttribute('data-theme');
-                localStorage.setItem('theme', 'light');
-                toggleButton.textContent = '🌙 Dark';
-            } else {
-                document.body.setAttribute('data-theme', 'dark');
-                localStorage.setItem('theme', 'dark');
-                toggleButton.textContent = '☀️ Light';
-            }
+        // Initialize Particles Background
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#38bdf8" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5, "random": false },
+                "size": { "value": 3, "random": true },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#38bdf8",
+                    "opacity": 0.2,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": { "enable": true, "mode": "grab" },
+                    "onclick": { "enable": true, "mode": "push" },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": { "distance": 140, "line_linked": { "opacity": 0.8 } },
+                    "push": { "particles_nb": 4 }
+                }
+            },
+            "retina_detect": true
         });
     </script>
 </body>
