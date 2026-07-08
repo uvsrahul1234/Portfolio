@@ -1,0 +1,126 @@
+.social-container {
+  max-width: 1000px;
+  padding: 0;
+}
+
+.social-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.social-tile {
+  width: 100%;
+  height: 160px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  border-radius: 20px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.14)),
+    radial-gradient(circle at top right, rgba(34, 211, 238, 0.12), transparent 10rem);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(34, 211, 238, 0.16);
+  color: #0891b2;
+  box-shadow: 0 12px 36px rgba(8, 145, 178, 0.1);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.social-tile:focus {
+  outline: none;
+}
+
+.social-tile:focus-visible {
+  outline: 2px solid #22d3ee;
+  outline-offset: 4px;
+}
+
+.social-tile:hover,
+.social-tile:focus-visible {
+  border-color: rgba(34, 211, 238, 0.34);
+  box-shadow: 0 18px 54px rgba(8, 145, 178, 0.18);
+}
+
+.dark-theme .social-tile {
+  background:
+    linear-gradient(135deg, rgba(15, 23, 42, 0.34), rgba(15, 23, 42, 0.18)),
+    radial-gradient(circle at top right, rgba(124, 58, 237, 0.14), transparent 10rem);
+  border: 1px solid rgba(34, 211, 238, 0.16);
+  color: #67e8f9;
+}
+
+.social-tile-icon {
+  display: inline-flex;
+  color: var(--social-color, #0891b2);
+  font-size: 2.6rem;
+}
+
+.social-tile-name {
+  color: #0f172a;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 800;
+}
+
+.dark-theme .social-tile-name {
+  color: #f8fafc;
+}
+
+/* Platform Colors */
+.social-tile:nth-child(1) {
+  --social-color: #333;
+}
+.social-tile:nth-child(2) {
+  --social-color: #0077b5;
+}
+.social-tile:nth-child(3) {
+  --social-color: #1da1f2;
+}
+.social-tile:nth-child(4) {
+  --social-color: #e4405f;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .social-links {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.5rem;
+  }
+  .social-tile {
+    height: 140px;
+  }
+  .social-tile-icon {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-links {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .social-tile {
+    height: 120px;
+  }
+  .social-tile-icon {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .social-links {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .social-tile {
+    height: 100px;
+  }
+  .social-tile-icon {
+    font-size: 1.8rem;
+  }
+}
