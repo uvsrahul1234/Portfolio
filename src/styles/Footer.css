@@ -1,0 +1,122 @@
+.site-footer {
+  position: relative;
+  z-index: 2;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+.footer-container {
+  position: relative;
+  max-width: 920px;
+  padding: clamp(2rem, 6vw, 4rem);
+  overflow: hidden;
+}
+
+.footer-orb {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: min(26rem, 75vw);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, rgba(34, 211, 238, 0.18), transparent 58%),
+    radial-gradient(circle, rgba(124, 58, 237, 0.16), transparent 70%);
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.footer-kicker,
+.site-footer h2,
+.footer-copy,
+.footer-link {
+  position: relative;
+}
+
+.footer-kicker {
+  margin: 0 0 0.75rem;
+  color: #0891b2;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.dark-theme .footer-kicker {
+  color: #67e8f9;
+}
+
+.site-footer h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: clamp(2.4rem, 8vw, 5rem);
+  font-weight: 900;
+  letter-spacing: -0.06em;
+}
+
+.dark-theme .site-footer h2 {
+  color: #f8fafc;
+}
+
+.footer-copy {
+  max-width: 56ch;
+  margin: 1rem auto 0;
+  color: #475569;
+  font-size: clamp(1rem, 2vw, 1.14rem);
+  line-height: 1.75;
+}
+
+.dark-theme .footer-copy {
+  color: #cbd5e1;
+}
+
+.footer-link {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 1.75rem;
+  padding: 0.85rem 1.15rem;
+  border: 1px solid rgba(34, 211, 238, 0.24);
+  border-radius: 999px;
+  color: #075985;
+  background: rgba(255, 255, 255, 0.14);
+  text-decoration: none;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 800;
+  transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+}
+
+.footer-link:hover,
+.footer-link:focus-visible {
+  color: #ffffff;
+  border-color: transparent;
+  background: linear-gradient(135deg, #0891b2, #7c3aed);
+  transform: translateY(-2px);
+}
+
+.dark-theme .footer-link {
+  color: #e0f2fe;
+  background: rgba(15, 23, 42, 0.18);
+}
+
+@media (max-width: 576px) {
+  .site-footer {
+    min-height: 100svh;
+    padding-block: 4rem;
+  }
+
+  .footer-container {
+    padding-inline: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-link {
+    transition: none;
+  }
+}
