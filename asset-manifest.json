@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.281e5f40.css",
+    "main.js": "/Portfolio/static/js/main.23b91ab1.js",
+    "static/js/958.e0597bbb.chunk.js": "/Portfolio/static/js/958.e0597bbb.chunk.js",
+    "static/js/861.6b871827.chunk.js": "/Portfolio/static/js/861.6b871827.chunk.js",
+    "static/media/collabcanvas.png": "/Portfolio/static/media/collabcanvas.2c8ced27e2c0b07137e7.png",
+    "static/media/ai_math_tutor.png": "/Portfolio/static/media/ai_math_tutor.5fbd671eb5e8a14a42b1.png",
+    "static/media/study_buddy.png": "/Portfolio/static/media/study_buddy.046cb19a2b1293386705.png",
+    "static/media/unilang.png": "/Portfolio/static/media/unilang.2c206a3c2863e47f7633.png",
+    "static/media/chatbot.png": "/Portfolio/static/media/chatbot.90f2b92f23b275a6524d.png",
+    "static/media/lawmint.png": "/Portfolio/static/media/lawmint.4aafbdaeb607b10fbd67.png",
+    "static/media/image_assistant.png": "/Portfolio/static/media/image_assistant.89a59990b20d71bcf2bb.png",
+    "static/media/logo.png": "/Portfolio/static/media/logo.7550a4a6fb41d4f9b496.png",
+    "static/media/clipforge.png": "/Portfolio/static/media/clipforge.9e590cb6d475d86d6354.png",
+    "static/media/housing_price.png": "/Portfolio/static/media/housing_price.6a87756c1a7ab9ff4123.png",
+    "index.html": "/Portfolio/index.html",
+    "main.281e5f40.css.map": "/Portfolio/static/css/main.281e5f40.css.map",
+    "main.23b91ab1.js.map": "/Portfolio/static/js/main.23b91ab1.js.map",
+    "958.e0597bbb.chunk.js.map": "/Portfolio/static/js/958.e0597bbb.chunk.js.map",
+    "861.6b871827.chunk.js.map": "/Portfolio/static/js/861.6b871827.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.281e5f40.css",
+    "static/js/main.23b91ab1.js"
+  ]
+}
