@@ -421,39 +421,39 @@ export const projectsData = [
     description:
       "Real-time messaging app with AI-powered translation, smart replies, tone adjustment, and slang detection for culturally aware communication across languages.",
   },
-  {
-    title: "ClipForge",
-    href: "https://drive.google.com/file/d/1-A4oRd3rHFjfV6bA83ixF3hfGDsazxK4/view?usp=drive_link",
-    imageKey: "clipforge",
-    alt: "ClipForge",
-    category: "Desktop App",
-    status: "Demo",
-    tags: ["Electron", "React", "Video"],
-    description:
-      "ClipForge is a modern, cross-platform desktop video editor built with Electron, React, and TypeScript. It provides an intuitive interface for video trimming, preview, and export with professional-grade performance.",
-  },
-  {
-    title: "AI Chatbot",
-    href: "https://github.com/ankitrijal2054/AI_Chatbot",
-    imageKey: "chatbot",
-    alt: "AI Chatbot",
-    category: "RAG",
-    status: "Code",
-    tags: ["LangChain", "RAG", "Knowledge Base"],
-    description:
-      "A chatbot with a custom knowledge base using LangChain and RAG.",
-  },
-  {
-    title: "Housing Price Predictor",
-    href: "https://github.com/ankitrijal2054/House_Price_Prediction",
-    imageKey: "housing",
-    alt: "Housing Price Prediction",
-    category: "Machine Learning",
-    status: "Code",
-    tags: ["ML", "Prediction", "Data"],
-    description:
-      "A machine learning model predicting house prices based on features.",
-  },
+  // {
+  //   title: "ClipForge",
+  //   href: "https://drive.google.com/file/d/1-A4oRd3rHFjfV6bA83ixF3hfGDsazxK4/view?usp=drive_link",
+  //   imageKey: "clipforge",
+  //   alt: "ClipForge",
+  //   category: "Desktop App",
+  //   status: "Demo",
+  //   tags: ["Electron", "React", "Video"],
+  //   description:
+  //     "ClipForge is a modern, cross-platform desktop video editor built with Electron, React, and TypeScript. It provides an intuitive interface for video trimming, preview, and export with professional-grade performance.",
+  // },
+  // {
+  //   title: "AI Chatbot",
+  //   href: "https://github.com/ankitrijal2054/AI_Chatbot",
+  //   imageKey: "chatbot",
+  //   alt: "AI Chatbot",
+  //   category: "RAG",
+  //   status: "Code",
+  //   tags: ["LangChain", "RAG", "Knowledge Base"],
+  //   description:
+  //     "A chatbot with a custom knowledge base using LangChain and RAG.",
+  // },
+  // {
+  //   title: "Housing Price Predictor",
+  //   href: "https://github.com/ankitrijal2054/House_Price_Prediction",
+  //   imageKey: "housing",
+  //   alt: "Housing Price Prediction",
+  //   category: "Machine Learning",
+  //   status: "Code",
+  //   tags: ["ML", "Prediction", "Data"],
+  //   description:
+  //     "A machine learning model predicting house prices based on features.",
+  // },
 ];
 
 export const educationData = [
