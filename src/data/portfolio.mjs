@@ -479,14 +479,14 @@ export const educationData = [
 
 export const certificationsData = [
   {
-    title: "PRODUCTION MACHINE LEARNING SYSTEMS",
-    provider: "GOOGLE CLOUD",
-    link: "https://coursera.org/share/a99e399adbdd37619c3c8bca76e78628",
+    title: "DevOps Foundation",
+    provider: "DevOps Institute",
+    link: "https://drive.google.com/file/d/1GJ84baDAhmd53wWAqsx5gkGJHRRDZx2B/view?usp=drive_link",
   },
   {
-    title: "FUNDAMENTALS OF AI AGENTS USING RAG AND LANGCHAIN",
-    provider: "IBM",
-    link: "https://coursera.org/share/0fff88ddf2f284b36e74e8d39d4d2e06",
+    title: "ADVANCED CERTIFICATION IN DATA SCIENCE & AI ",
+    provider: "Indian Institue of Technology Madras",
+    link: "https://drive.google.com/file/d/1bdmISFPxZCc0JLgLusWYaKTD6suJAxhK/view?usp=drive_link",
   },
   {
     title: "GENERATIVE AI ADVANCE FINE-TUNING FOR LLMs",
@@ -514,25 +514,25 @@ export const socialsData = [
   {
     name: "GitHub",
     iconKey: "FaGithub",
-    link: "https://github.com/ankitrijal2054",
+    link: "https://github.com/uvsrahul1234",
     color: "#333",
   },
   {
     name: "LinkedIn",
     iconKey: "FaLinkedin",
-    link: "https://www.linkedin.com/in/ankitrjl2054/",
+    link: "https://www.linkedin.com/in/rahul-unnam/",
     color: "#0077b5",
   },
-  {
-    name: "X/Twitter",
-    iconKey: "FaXTwitter",
-    link: "https://x.com/ankit_rijal2054",
-    color: "#1da1f2",
-  },
-  {
-    name: "Instagram",
-    iconKey: "FaInstagramSquare",
-    link: "https://www.instagram.com/ankit_rjl",
-    color: "#e4405f",
-  },
+  // {
+  //   name: "X/Twitter",
+  //   iconKey: "FaXTwitter",
+  //   link: "https://x.com/ankit_rijal2054",
+  //   color: "#1da1f2",
+  // },
+  // {
+  //   name: "Instagram",
+  //   iconKey: "FaInstagramSquare",
+  //   link: "https://www.instagram.com/ankit_rjl",
+  //   color: "#e4405f",
+  // },
 ];
