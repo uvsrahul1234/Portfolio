@@ -35,7 +35,8 @@ export const sectionIds = {
 export const experienceData = [
   {
     role: "Research Assistant",
-    company: "University of North Texas - Data-Driven Decisions Lab",
+    company:
+      "University of North Texas - Data Driven Decisions Lab | Denton, TX",
     dates: "May 2025 - May 2026",
     // status: "Current",
     bullets: [
@@ -43,61 +44,41 @@ export const experienceData = [
       "Developed a robust spatial-temporal data pipeline to process multi-year, high-dimensional environmental grid data by conducting extensive feature engineering, normalization, and dimensionality reduction on unstructured spatial-grid datasets for sequence modeling.",
       "Evaluated and benchmarked deep learning architectures (LSTM, PINN) against classical statistical baselines (SARIMAX) and optimized hyperparameters to achieve an 18% reduction in Root Mean Squared Error (RMSE), significantly outperforming traditional time-series models in forecasting accuracy.",
     ],
-    projects: [
-      {
-        title: "Symbolic Math Module Generator",
-        description:
-          "AI agent workflow for generating structured math modules with persistence, quality gates, and self-correction loops that cut build time from months to days.",
-      },
-      {
-        title: "AI Grading Pipeline",
-        description:
-          "End-to-end grading system with OCR-first ingestion of handwritten work, automating scoring and feedback to save teachers hours of manual grading.",
-      },
-      {
-        title: "Parent Admissions Platform",
-        description:
-          "Full-stack platform covering the admissions-to-enrollment funnel, with native iOS and Android apps shipped from a shared codebase to the App Store and Play Store.",
-      },
-      {
-        title: "Integrations & Payments Layer",
-        description:
-          "Bidirectional HubSpot CRM sync, Stripe payments with a webhook-driven ledger, a two-way Slack relay, and async LLM-powered multilingual messaging.",
-      },
-    ],
   },
   {
-    role: "Software Developer",
-    company: "The Reynolds and Reynolds Company, College Station, TX",
-    dates: "Jan 2022 - Jul 2024",
+    role: "Senior Systems Engineer",
+    company: "Infosys Ltd. | Delhi, India",
+    dates: "Dec 2020 – Jul 2024",
     bullets: [
-      "Developed full-stack KeyTrak applications across desktop, web, and mobile using C#/.NET, React.js, and Electron.js, serving 5,000+ enterprise customers.",
-      "Designed 30+ RESTful APIs using ASP.NET Core with SOLID principles, improving system performance, modularity, and long-term maintainability.",
-      "Migrated 50+ CI/CD pipelines from Jenkins to GitHub Actions, reducing deployment time by 30%.",
-      "Led version control migration from SVN to Git across Agile teams, enabling modern collaboration workflows.",
+      "Architected serverless ETL/ELT workflows using AWS Lambda and Airflow to ingest and orchestrate multi-source enterprise data streams, resulting in reduced data latency by 40% and enabling real-time KPI tracking for executive-level Power BI dashboards.",
+      "Developed an end-to-end predictive modeling workflow using XGBoost and LSTM architectures for industrial underflow density forecasting and integrated Optuna, GridSearchCV for automated hyperparameter tuning to achieve 1.8% MAPE (vs Random Forest 3.4%, ANN 7.3%) while reducing training time by 40%.",
+      "Spearheaded the migration of legacy on-premises data to Amazon Redshift, implementing dimensional modeling (Star Schema) that accelerated query execution time by ~3x and empowered the BI team to run complex analytics reports without timeouts.",
+      "Engineered a scalable NLP pipeline integrating OpenAI API to parse high-volume (30GB+) unstructured log data into structured metrics for trend analysis, guiding client resource allocation decisions and eliminating 6 hours of manual review per week.",
+      "Designed custom search and observability configurations using the ELK Stack (Elasticsearch, Logstash, Kibana) to parse real-time network telemetry, uncovering operational bottlenecks and resulting in a 30% reduction in software release cycle times.",
+      "Engineered automated data quality anomaly checks (Python) within CI/CD pipelines, reducing downstream BI reporting errors by 24% and ensuring strict data governance for client regulatory compliance audits.",
     ],
-    projects: [
-      {
-        title: "SVN to GitHub Repository Migration",
-        description:
-          "Migrated an extensive SVN repository to GitHub, improving developer collaboration and modernizing version control workflows.",
-      },
-      {
-        title: "Build Process Migration to GitHub Actions",
-        description:
-          "Moved 50+ build processes from Jenkins to GitHub Actions, improving automation, reliability, and deployment speed.",
-      },
-      {
-        title: "Database Update Automation",
-        description:
-          "Built PowerShell and console tooling to automate database updates, reducing manual intervention by 90%.",
-      },
-      {
-        title: "Motion Detection Integration",
-        description:
-          "Integrated motion detection into KeyTrak Guardian using Accord.Net to support enhanced security workflows.",
-      },
-    ],
+    // projects: [
+    //   {
+    //     title: "SVN to GitHub Repository Migration",
+    //     description:
+    //       "Migrated an extensive SVN repository to GitHub, improving developer collaboration and modernizing version control workflows.",
+    //   },
+    //   {
+    //     title: "Build Process Migration to GitHub Actions",
+    //     description:
+    //       "Moved 50+ build processes from Jenkins to GitHub Actions, improving automation, reliability, and deployment speed.",
+    //   },
+    //   {
+    //     title: "Database Update Automation",
+    //     description:
+    //       "Built PowerShell and console tooling to automate database updates, reducing manual intervention by 90%.",
+    //   },
+    //   {
+    //     title: "Motion Detection Integration",
+    //     description:
+    //       "Integrated motion detection into KeyTrak Guardian using Accord.Net to support enhanced security workflows.",
+    //   },
+    // ],
   },
 ];
 
@@ -477,21 +458,21 @@ export const projectsData = [
 
 export const educationData = [
   {
-    degree: "Fellowship in Applied AI",
-    school: "Gauntlet AI",
-    year: "2025",
+    degree: "Master's in Data Science",
+    school: "University of North Texas | Denton, TX",
+    year: "May 2026",
     status: "Completed",
   },
+  // {
+  //   degree: "Bache",
+  //   school: "University of the Cumberlands",
+  //   year: "2025",
+  //   status: "Completed",
+  // },
   {
-    degree: "Master's in Artificial Intelligence",
-    school: "University of the Cumberlands",
-    year: "2025",
-    status: "Completed",
-  },
-  {
-    degree: "Bachelor's in Computer Science",
-    school: "East Central University",
-    year: "2021",
+    degree: "Bachelor's in Mechanical Engineering",
+    school: "Vellore Institute of Technology | Vellore, India",
+    year: "May 2020",
     status: "Completed",
   },
 ];
