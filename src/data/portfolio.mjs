@@ -17,7 +17,8 @@ export const aboutMeStatusTagline = "Building agentic AI in production";
 
 export const aboutMeBio =
   "I am an AI Software Engineer and Data Scientist with 4 years of enterprise experience building production-grade applications and LLM-powered systems. I Build agentic AI platforms in production, from autonomous execution frameworks and state-aware enterprise graph agents to scalable RAG and serverless ETL/ELT pipelines. Backed by a strong foundation in backend engineering, MLOps, and shipping apps end to end on AWS, Azure and GCP. I work AI-native to move fast while maintaining a rigorous bar for algorithmic optimization, scalability, and DevSecOps reliability across cloud and enterprise environments.";
-export const resumeUrl = "/public/assets/Venkata_Resume.pdf";
+
+export const resumeUrl = "/assets/Venkata_Resume.pdf";
 
 // Section IDs used for scroll-to-section navigation. Must match the id="" props in App.js.
 export const sectionIds = {

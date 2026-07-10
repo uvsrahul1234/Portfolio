@@ -2,11 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import {
-  FiDownload,
-  FiMail,
-  FiZap,
-} from "react-icons/fi";
+import { FiDownload, FiMail, FiZap } from "react-icons/fi";
 import "../styles/AboutMe.css";
 import {
   aboutMeRoles as roles,
@@ -59,20 +55,27 @@ function AboutMe() {
   };
 
   return (
-    <Container fluid className="about-me-container modern-hero-container" ref={ref}>
+    <Container
+      fluid
+      className="about-me-container modern-hero-container"
+      ref={ref}
+    >
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
       >
-        <motion.section className="hero-intro-panel hero-intro-panel-full" variants={itemVariants}>
+        <motion.section
+          className="hero-intro-panel hero-intro-panel-full"
+          variants={itemVariants}
+        >
           <div className="hero-status-pill">
             <FiZap aria-hidden="true" />
             {aboutMeStatusTagline}
           </div>
 
           <p className="hero-eyebrow">Hello, I am</p>
-          <h1 className="hero-name">Ankit Rijal</h1>
+          <h1 className="hero-name">Venkata Sai Rahul Unnam</h1>
           <motion.p
             className="hero-role"
             key={currentTextIndex}
@@ -86,7 +89,10 @@ function AboutMe() {
           <p className="hero-bio">{aboutMeBio}</p>
 
           <div className="button-group">
-            <motion.div whileHover={{ scale: 1.04, y: -2 }} whileTap={{ scale: 0.96 }}>
+            <motion.div
+              whileHover={{ scale: 1.04, y: -2 }}
+              whileTap={{ scale: 0.96 }}
+            >
               <Button
                 variant="primary"
                 href={resumeHref}
@@ -98,7 +104,10 @@ function AboutMe() {
               </Button>
             </motion.div>
 
-            <motion.div whileHover={{ scale: 1.04, y: -2 }} whileTap={{ scale: 0.96 }}>
+            <motion.div
+              whileHover={{ scale: 1.04, y: -2 }}
+              whileTap={{ scale: 0.96 }}
+            >
               <Button
                 variant="secondary"
                 onClick={scrollToContact}
