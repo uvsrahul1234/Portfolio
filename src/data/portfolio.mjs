@@ -33,16 +33,14 @@ export const sectionIds = {
 
 export const experienceData = [
   {
-    role: "AI Software Engineer",
-    company: "Flourish Schools, Remote",
-    dates: "Feb 2026 - Current",
-    status: "Current",
+    role: "Research Assistant",
+    company: "University of North Texas - Data-Driven Decisions Lab",
+    dates: "May 2025 - May 2026",
+    // status: "Current",
     bullets: [
-      "Developed an AI agent using the Pydantic deep agents framework that generates symbolic math modules with deterministic orchestration, quality gates, crash-safe persistence, and error-driven self-correction, reducing build time from months to days.",
-      "Built an end-to-end AI grading pipeline with OCR-first ingestion of handwritten student work, automating scoring and feedback and sharply reducing teachers' manual grading time.",
-      "Architected and launched a full-stack parent platform covering the complete admissions-to-enrollment funnel, shipping native iOS and Android apps from the same codebase through App Store and Play Store submission.",
-      "Built the platform's integration layer: a bidirectional HubSpot CRM sync engine, Stripe payments with a webhook-driven ledger, a two-way Slack relay for staff messaging, and real-time multilingual messaging powered by an async LLM translation pipeline.",
-      "Leveraged an AI-assisted engineering workflow with multi-agent code generation, AI-driven code audits, and automated verification to ship production features at high velocity without compromising security or reliability.",
+      "Authored a first-author IEEE research paper on 'Scientific Machine Learning for Analyzing Air Quality of North Texas' by using Physics-Informed Neural Network (PINN) and embedding partial differential equations (PDEs) directly into the custom deep learning loss function, mitigating gradient explosion and increasing long-term forecast stability.",
+      "Developed a robust spatial-temporal data pipeline to process multi-year, high-dimensional environmental grid data by conducting extensive feature engineering, normalization, and dimensionality reduction on unstructured spatial-grid datasets for sequence modeling.",
+      "Evaluated and benchmarked deep learning architectures (LSTM, PINN) against classical statistical baselines (SARIMAX) and optimized hyperparameters to achieve an 18% reduction in Root Mean Squared Error (RMSE), significantly outperforming traditional time-series models in forecasting accuracy.",
     ],
     projects: [
       {
